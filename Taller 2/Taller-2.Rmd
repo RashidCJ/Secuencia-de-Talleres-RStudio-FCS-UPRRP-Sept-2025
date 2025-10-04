@@ -1,9 +1,12 @@
 ---
 title: "CACCS: Secuencia de taller de RStudio -- Parte 2"
 author: "Rashid C.J. Marcano Rivera"
-date: "12 de feb.º de 2025"
+date: "3 de oct.ᵉ de 2025"
 output:
+  word_document:
+    toc: true
   pdf_document:
+    latex_engine: xelatex
     toc: true
   html_document:
     theme: cerulean
@@ -12,7 +15,7 @@ output:
     number_sections: true
 ---
 
-**Visualización de datos** Este es el segundo de cuatro talleres secuenciales de R a través de RStudio. Este taller está basado en viñetas de RStudio con tidyverse (en específico [`ggplot`,](https://ggplot2.tidyverse.org)) así como elementos y ejemplos del libro de Rafael Irizarry [disponible aquí](https://leanpub.com/dslibro) o de manera similar a los html producidos en este taller y y más actualizada [aquí](https://rafalab.dfci.harvard.edu/dslibro/). Finalmente la parte del censo proviene en parte de código ajustado del libro [Public Policy Analytics: Code & Context for Data Science in Government](https://urbanspatial.github.io/PublicPolicyAnalytics/introduction.html), por Ken Steif.
+**Visualización de datos** Este es el segundo de tres talleres secuenciales de R a través de RStudio. Este taller está basado en viñetas de RStudio con tidyverse (en específico [`ggplot`,](https://ggplot2.tidyverse.org)) así como elementos y ejemplos del libro de Rafael Irizarry [disponible aquí](https://leanpub.com/dslibro) o de manera similar a los html producidos en este taller y y más actualizada [aquí](https://rafalab.dfci.harvard.edu/dslibro/). Finalmente la parte del censo proviene en parte de código ajustado del libro [Public Policy Analytics: Code & Context for Data Science in Government](https://urbanspatial.github.io/PublicPolicyAnalytics/introduction.html), por Ken Steif.
 
 *Si aún no has instalado R, está [aquí](http://cran.us.r-project.org/). Acto seguido, [baja RStudio](https://posit.co/download/rstudio-desktop/). Puedes también ir a la nube [en Posit Cloud](https://posit.cloud/).*
 
@@ -51,7 +54,7 @@ Vivimos en una era de creciente disponibilidad de conjuntos de datos informativo
 
 En R, una de las principales maneras con la que trabajaremos estos análisis visuales es de la mano de `ggplot2`, así como con otros paquetes que ayudan a procesar esta información. Si bien existen otros métodos de graficar en R y otros programas, la preferencia de este taller es utilizar el sistema de procesamiento que ofrece `tidyverse`, con `ggplot2` incluido.
 
-Esta es una secuencia de cuatro semanas, y en esta lección continuamos con lo aprendido la semana anterior, donde terminamos con visualizaciones sencillas y con el uso de `tidyverse` para manejar datos. Tenemos la meta hoy de que al culminar las segundas dos horas de esta secuencia podamos:
+Esta es una secuencia de tres semanas, y en esta lección continuamos con lo aprendido la semana anterior, donde terminamos con visualizaciones sencillas y con el uso de `tidyverse` para manejar datos. Tenemos la meta hoy de que al culminar las segundas dos horas de esta secuencia podamos:
 
 1.  Entender cómo usar la gramática de gráficas
 
@@ -59,7 +62,7 @@ Esta es una secuencia de cuatro semanas, y en esta lección continuamos con lo a
 
 3.  Entender cómo utilizar en varias maneras `tidycensus` para generar mapas.
 
-En la próxima sesión, del 19 de febrero, entraremos más en *wrangling* de datos, así como en la inferencia estadística, con introducciones en R sobre modelos lineales, jerárquicos y longitudinales, así como sus diagnósticos posteriores. En la última sesión, pautada para el 26 de este mes, evaluaremos análisis de redes, y de ser posible, otros métodos de análisis textual.
+En la próxima sesión, del 10 de octubre, entraremos más en *wrangling* de datos, así como en la inferencia estadística, con introducciones en R sobre modelos lineales, jerárquicos y longitudinales, así como sus diagnósticos posteriores. 
 
 # ggplot2
 
@@ -531,7 +534,6 @@ library(tidyverse)
 library(tidycensus)
 library(sf)
 #census_api_key(INSERTE SU LLAVE DEL CENSO AQUÍ)
-census_api_key("d4e473f5a898ce2107a3af89a7e63a7151c050a3", install= TRUE,overwrite=TRUE) 
 
 options(scipen=999)
 options(tigris_class = "sf")
@@ -731,6 +733,6 @@ Hoy aprendimos varias cosas en R:
 -   Uso de tidycensus para descargar datos censales
 -   Gráficos con mapas
 
-## Continuamos el próximo miércoles
+## Continuamos el próximo viernes
 
-En los talleres que vienen continuaremos ahondando en operaciones estadísticas, así como estadística inferencial, y finalmente gráficos que ayuden a entender y diagnosticar los modelos estadísticos que usaremos. Finalmente entraremos en análisis de redes y si el tiempo permite, el último miércoles, también trabajaremos análisis de datos textual. Gracias por asistir hoy.
+En el taller que vienen continuaremos ahondando en operaciones estadísticas, así como estadística inferencial, y finalmente gráficos que ayuden a entender y diagnosticar los modelos estadísticos que usaremos. Gracias por asistir hoy.
